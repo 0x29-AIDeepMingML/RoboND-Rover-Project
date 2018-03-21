@@ -3,21 +3,21 @@
 [//]: # (Image References)
 
 [image_0]: ./misc/rover_image.jpg
-[image_1]: ./misc/pic_1.jpg
-[image_2]: ./misc/pic_2.jpg
-[image_3]: ./misc/pic_3.jpg
-[image_4]: ./misc/pic_4.jpg
-[image_5]: ./misc/pic_5.jpg
-[image_6]: ./misc/pic_6.jpg
-[image_7]: ./misc/pic_7.jpg
-[image_8]: ./misc/pic_8.jpg
-[image_9]: ./misc/pic_9.jpg
-[image_10]: ./misc/pic_10.jpg
-[image_11]: ./misc/pic_11.jpg
-[image_12]: ./misc/pic_12.jpg
-[image_13]: ./misc/pic_13.jpg
-[image_14]: ./misc/pic_14.jpg
-[image_15]: ./misc/pic_15.jpg
+[image_1]: ./misc/pic_1.png
+[image_2]: ./misc/pic_2.png
+[image_3]: ./misc/pic_3.png
+[image_4]: ./misc/pic_4.png
+[image_5]: ./misc/pic_5.png
+[image_6]: ./misc/pic_6.png
+[image_7]: ./misc/pic_7.png
+[image_8]: ./misc/pic_8.png
+[image_9]: ./misc/pic_9.png
+[image_10]: ./misc/pic_10.png
+[image_11]: ./misc/pic_11.png
+[image_12]: ./misc/pic_12.png
+[image_13]: ./misc/pic_13.png
+[image_14]: ./misc/pic_14.png
+[image_15]: ./misc/pic_15.png
 
 This project is about the [NASA sample return challenge](https://www.nasa.gov/directorates/spacetech/centennial_challenges/sample_return_robot/index.html) but I only finish the part of Udacity Project, to detect the entire environment and find rocks. 
 
