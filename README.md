@@ -57,17 +57,23 @@ The result of Color Thresholding to map-view is like this.
 ![alt text][image_7]
 There is a little issue, the original point(the 0 point)is not the place of Rover. So use rover_coords function in my code to tranform it. Then the final result of Color Thresholding as below.
 ![alt text][image_8]
-## Get the location
+
+### Map to World Coordinates
 The position information can be gotten from the simulator when the program connected to it. Also it is exist in a .csv file when Recording Data step.
 ![alt text][image_9]
-Then the map of simulator.
+Then the map of simulator as below.
 ![alt text][image_10]
 With position and map-view we can map the Rover into the map.
 ![alt text][image_11]
-Next tell some detail.
-### Map to World Coordinates
+Next tell some detail.  
 Rover has its own Rover-Coordinate and it's different from World-Coordinate most of time. It is import to keep the only coordinate system when we deal with object's location. So use [Rotation Matrix](https://en.wikipedia.org/wiki/Rotation_matrix) to transform the Rover-Coordinate. In my code, function rotate_pix will apply the rotation and function translate_pix will perform the translation to the map. Then function pix_to_world will call them to finish this job.
 ![alt text][image_12]
+
+### Code of perception_step function
+Here is some points of my perception_step function.  
+* I use three var obstacle_disp, navigable_disp, sampleRocks_disp to display non-warped images into the bottom left window in the simulator. I think it is comfortable to look.
+* I set a decision about if the Rover pitch too much.
+* I set a decision about if the sampleRocks in sight, and if a sampleRock has been found, self.samples_located in drive_rover.py will be True.
 
 ## Decision(decision_step)
 When the simulator is working in Autonomous Mode, some states of Rover will be display here.
@@ -79,7 +85,7 @@ Make a instance of this class can control the Rover by all of these parameters. 
 The to_polar_coords will do this job in my code.
 ### Modify the logic of decision
 The "perception.py" is the eye of the Rover and also the "decision.py" file is the control center of the Rover. They are called in the "driver_rover.py" to complate once step of Rover Moving. We can get one image from RoverState.img in only one step. Then deal with this image will make a decision about next moving.  
-It's really hard for me to modify "decision.py". I tried several kind of strategy, but it is always get worse.So in this submit I only modify the Rover.steer to different value when choise left or right. This will make the Rover keep to one side and avoid some loops.
+It's really hard for me to modify "decision.py". I tried several kind of strategy, but it is always get worse. So in this submit I only change Rover.nav_dists**2 to be len(Rover.nav_angles). Because the value of Rover.stop_forward is 50, but Rover.nav_dists is just an array. They can't be caculated together with '>' or '<'.
 ## Future Enhancement
 I'll work on this project. I'm trying the A* algorithm to make route planning.
 
