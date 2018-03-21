@@ -101,15 +101,15 @@ Here is some points of my perception_step function.
 ## Decision(decision_step)
 When the simulator is working in Autonomous Mode, some states of Rover will be display here.
 
-![alt text][image 13]
+![alt text][image_13]
 
 All of parameters of Rover will be transport between the simulator and the file "driver_rover.py" as a class RoverState.
 
-![alt text][image 14]
+![alt text][image_14]
 
 Make a instance of this class can control the Rover by all of these parameters. But firstly caculator the angle for Rover to rotate the direction and caculator the distance of main direction in the Color Thresholding Image is very useful to control the Rover.
 
-![alt text][image 15]
+![alt text][image_15]
 
 The to_polar_coords will do this job in my code.
 ### Modify the logic of decision
